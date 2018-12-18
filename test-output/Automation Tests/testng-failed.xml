@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Automation Tests]" parallel="tests">
+  <test thread-count="3" name="InternetExplorerTests(failed)" parallel="tests">
+    <parameter name="browser" value="Internet Explorer"/>
+    <classes>
+      <class name="mdThink.SiteChecksSplit">
+        <methods>
+          <include name="checkOpenAM"/>
+          <include name="checkBitbucket"/>
+          <include name="checkLTC"/>
+          <include name="setup"/>
+          <include name="checkAccessMDThink"/>
+          <include name="checkEeMDThink"/>
+          <include name="checkJenkins"/>
+          <include name="checkServicedesk"/>
+          <include name="checkIdentityMDThink"/>
+          <include name="tearDown"/>
+          <include name="checkConfluence"/>
+          <include name="checkSplunk"/>
+        </methods>
+      </class> <!-- mdThink.SiteChecksSplit -->
+    </classes>
+  </test> <!-- InternetExplorerTests(failed) -->
+  <test thread-count="3" name="ChromeTests(failed)" parallel="tests">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="mdThink.SiteChecksSplit">
+        <methods>
+          <include name="checkLTC"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- mdThink.SiteChecksSplit -->
+    </classes>
+  </test> <!-- ChromeTests(failed) -->
+  <test thread-count="3" name="FirefoxTests(failed)" parallel="tests">
+    <parameter name="browser" value="Firefox"/>
+    <classes>
+      <class name="mdThink.SiteChecksSplit">
+        <methods>
+          <include name="checkLTC"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- mdThink.SiteChecksSplit -->
+    </classes>
+  </test> <!-- FirefoxTests(failed) -->
+</suite> <!-- Failed suite [Automation Tests] -->

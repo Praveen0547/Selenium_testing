@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Automation Tests" parallel="tests" thread-count="3">
+<test name="ChromeTests">
+  <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="mdThink.SiteChecksSplitRemote"/>
+    </classes>
+  </test>
+  <test name="FirefoxTests">
+  <parameter name="browser" value="Firefox"/>
+    <classes>
+      <class name="mdThink.SiteChecksSplitRemote"/>
+    </classes>
+  </test> 
+  <test name="InternetExplorerTests">
+  <parameter name="browser" value="Internet Explorer"/>
+    <classes>
+      <class name="mdThink.SiteChecksSplitRemote"/>
+    </classes>
+  </test> 
+</suite> 

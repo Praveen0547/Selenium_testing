@@ -1,0 +1,286 @@
+<html>
+<head>
+<title>TestNG:  ChromeTests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>ChromeTests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>9/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Sep 19 12:15:35 EDT 2018</td>
+</tr>
+<tr><td>Total time:</td><td>47 seconds (47510 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='mdThink.SiteChecksSplit.checkLTC()'><b>checkLTC</b><br>Test class: mdThink.SiteChecksSplit<br/>
+<a href="#Output-1595162793" onClick='toggleBox("Output-1595162793", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1595162793" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1595162793">
+<font color='red'><b>Not able to connect to the site: </b></font>https://access.mymdthink.maryland.gov/openam/XUI/?realm=/External&goto=https%3A%2F%2Fmymdthink.maryland.gov%2Fcp%2F#login/<br /><br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;FailonPurpose&quot;}
+  (Session info: chrome=69.0.3497.100)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.13.0&apos;, revision: &apos;2f0d292&apos;, time: &apos;2018-06-25T15:32:14.902Z&apos;
+System info: host: &apos;DML-01934&apos;, ip: &apos;172.27.20.174&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\MADJOO~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 69.0.3497.100, webStorageEnabled: true}
+Session ID: f30ab7f8f3252df14d4c54806b37a637
+*** Element info: {Using=css selector, value=FailonPurpose}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:416)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at mdThink.SiteChecksSplit.compareTitles(SiteChecksSplit.java:231)
+	at mdThink.SiteChecksSplit.checkLTC(SiteChecksSplit.java:76)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 20 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1595162793", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1595162793'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;FailonPurpose&quot;}
+  (Session info: chrome=69.0.3497.100)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.13.0&apos;, revision: &apos;2f0d292&apos;, time: &apos;2018-06-25T15:32:14.902Z&apos;
+System info: host: &apos;DML-01934&apos;, ip: &apos;172.27.20.174&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\MADJOO~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 69.0.3497.100, webStorageEnabled: true}
+Session ID: f30ab7f8f3252df14d4c54806b37a637
+*** Element info: {Using=css selector, value=FailonPurpose}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:416)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at mdThink.SiteChecksSplit.compareTitles(SiteChecksSplit.java:231)
+	at mdThink.SiteChecksSplit.checkLTC(SiteChecksSplit.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>2</td>
+<td>mdThink.SiteChecksSplit@13deb50e</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='mdThink.SiteChecksSplit.checkAccessMDThink()'><b>checkAccessMDThink</b><br>Test class: mdThink.SiteChecksSplit<br/>
+<a href="#Output-1276761267" onClick='toggleBox("Output-1276761267", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1276761267" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1276761267">
+<font color='green'>Successfully able to connect to: </font>https://access.mymdthink.maryland.gov/openam/XUI/#login/<br /><br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>mdThink.SiteChecksSplit@13deb50e</td></tr>
+<tr>
+<td title='mdThink.SiteChecksSplit.checkBitbucket()'><b>checkBitbucket</b><br>Test class: mdThink.SiteChecksSplit<br/>
+<a href="#Output-1228733780" onClick='toggleBox("Output-1228733780", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1228733780" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1228733780">
+<font color='green'>Successfully able to connect to: </font>https://source.mdthink.maryland.gov/login?nextUrl=%2Fdashboard<br /><br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>mdThink.SiteChecksSplit@13deb50e</td></tr>
+<tr>
+<td title='mdThink.SiteChecksSplit.checkConfluence()'><b>checkConfluence</b><br>Test class: mdThink.SiteChecksSplit<br/>
+<a href="#Output-874971215" onClick='toggleBox("Output-874971215", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-874971215" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-874971215">
+<font color='green'>Successfully able to connect to: </font>https://wiki.mdthink.maryland.gov/login.action?os_destination=%2Findex.action&permissionViolation=true<br /><br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>mdThink.SiteChecksSplit@13deb50e</td></tr>
+<tr>
+<td title='mdThink.SiteChecksSplit.checkEeMDThink()'><b>checkEeMDThink</b><br>Test class: mdThink.SiteChecksSplit<br/>
+<a href="#Output-913176692" onClick='toggleBox("Output-913176692", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-913176692" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-913176692">
+<font color='green'>Successfully able to connect to: </font>https://access.mdthink.maryland.gov/openam/XUI/?service=LTCMFA&goto=https%3A%2F%2Fee.mdthink.maryland.gov%2Fee%2F#login/<br /><br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>mdThink.SiteChecksSplit@13deb50e</td></tr>
+<tr>
+<td title='mdThink.SiteChecksSplit.checkIdentityMDThink()'><b>checkIdentityMDThink</b><br>Test class: mdThink.SiteChecksSplit<br/>
+<a href="#Output-527484109" onClick='toggleBox("Output-527484109", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-527484109" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-527484109">
+<font color='green'>Successfully able to connect to: </font>https://identity.mdthink.maryland.gov/<br /><br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>mdThink.SiteChecksSplit@13deb50e</td></tr>
+<tr>
+<td title='mdThink.SiteChecksSplit.checkJenkins()'><b>checkJenkins</b><br>Test class: mdThink.SiteChecksSplit<br/>
+<a href="#Output-1772003722" onClick='toggleBox("Output-1772003722", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1772003722" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1772003722">
+<font color='green'>Successfully able to connect to: </font>https://build.mdthink.maryland.gov/login?from=%2F<br /><br/>
+</div>
+</td>
+<td></td>
+<td>11</td>
+<td>mdThink.SiteChecksSplit@13deb50e</td></tr>
+<tr>
+<td title='mdThink.SiteChecksSplit.checkOpenAM()'><b>checkOpenAM</b><br>Test class: mdThink.SiteChecksSplit<br/>
+<a href="#Output-932651422" onClick='toggleBox("Output-932651422", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-932651422" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-932651422">
+<font color='green'>Successfully able to login to: </font>https://uat.access.mdthink.maryland.gov/openam/XUI/#<br /><br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>mdThink.SiteChecksSplit@13deb50e</td></tr>
+<tr>
+<td title='mdThink.SiteChecksSplit.checkServicedesk()'><b>checkServicedesk</b><br>Test class: mdThink.SiteChecksSplit<br/>
+<a href="#Output-1400979942" onClick='toggleBox("Output-1400979942", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1400979942" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1400979942">
+<font color='green'>Successfully able to connect to: </font>https://servicedesk.mdthink.maryland.gov/secure/Dashboard.jspa<br /><br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>mdThink.SiteChecksSplit@13deb50e</td></tr>
+<tr>
+<td title='mdThink.SiteChecksSplit.checkSplunk()'><b>checkSplunk</b><br>Test class: mdThink.SiteChecksSplit<br/>
+<a href="#Output-1582947518" onClick='toggleBox("Output-1582947518", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1582947518" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1582947518">
+<font color='green'>Successfully able to connect to: </font>https://log.mdthink.maryland.gov/en-US/account/login?return_to=%2Fen-US%2F<br /><br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>mdThink.SiteChecksSplit@13deb50e</td></tr>
+</table><p>
+</body>
+</html>
